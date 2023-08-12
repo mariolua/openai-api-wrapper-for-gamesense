@@ -123,7 +123,7 @@ end
 function Chatbot:__truncate_conversation(convo_id)
     while true do
         if self:get_token_count(self.convo_id) > self.truncate_limit and #self.conversation[self.convo_id] > 1 then
-            table.remove(self.conversation[self.convo_id], 1)
+            table.remove(self.conversation[self.convo_id], 2)
         else
             break
         end
